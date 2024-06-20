@@ -1,2 +1,70 @@
 <app-navbar></app-navbar>
-<p>planes works!</p>
+<div class="top-section">
+    <div class="top-content">
+        <div class="left-content">
+            <h2>Exprime al máximo tus sorteos y haz que te amen tus clientes</h2>
+            <p>El plan Standard abarca todo lo bueno que deseas a un precio que anhelas.</p>
+            <div class="buttons">
+                <a href="#" class="btn btn-primary">Plan Standard</a>
+                <button class="btn btn-scroll">Lista de precios</button>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="assets/images/logos de redes 2.png" alt="Social Media Icons" class="social-icons">
+        </div>
+    </div>
+</div>
+
+<div class="planes-container">
+    <h2>¡Descubre los planes que tenemos para ti!</h2>
+    
+    <div class="planes">
+        <div class="plan" 
+            (mouseover)="expandPlan('plan1')" 
+            (mouseleave)="collapsePlan('plan1')" 
+            [class.expanded]="expandedPlan === 'plan1'" 
+            [class.hidden]="expandedPlan && expandedPlan !== 'plan1'"
+            [ngClass]="{'plan1-expanded': expandedPlan === 'plan1'}"
+            [ngStyle]="getDynamicStyles('plan1')">
+            <h3>Plan Básico</h3>
+            <div class="precio">$10</div>
+            <ul *ngIf="expandedPlan === 'plan1'">
+                <li>Acceso a sorteos solo de Instagram y Facebook</li>
+                <li>Ingreso de participantes ilimitado</li>
+            </ul>
+        </div>
+        
+        <div class="plan" 
+            (mouseover)="expandPlan('plan2')" 
+            (mouseleave)="collapsePlan('plan2')" 
+            [class.expanded]="expandedPlan === 'plan2'" 
+            [class.hidden]="expandedPlan && expandedPlan !== 'plan2'"
+            [ngClass]="{'plan2-expanded': expandedPlan === 'plan2'}"
+            [ngStyle]="getDynamicStyles('plan2')">
+            <h3>Plan Standard</h3>
+            <div class="precio">$20</div>
+            <ul *ngIf="expandedPlan === 'plan2'">
+                <li>Acceso a sorteos solo de Instagram y Facebook</li>
+                <li>Ingreso de participantes ilimitado</li>
+                <li>Función de exportación de datos</li>
+            </ul>
+        </div>
+        
+        <div class="plan" 
+            (mouseover)="expandPlan('plan3')" 
+            (mouseleave)="collapsePlan('plan3')" 
+            [class.expanded]="expandedPlan === 'plan3'" 
+            [class.hidden]="expandedPlan && expandedPlan !== 'plan3'"
+            [ngClass]="{'plan3-expanded': expandedPlan === 'plan3'}"
+            [ngStyle]="getDynamicStyles('plan3')">
+            <h3>Plan Premium</h3>
+            <div class="precio">$30</div>
+            <ul *ngIf="expandedPlan === 'plan3'">
+                <li>Acceso a sorteos solo de Instagram y Facebook</li>
+                <li>Ingreso de participantes ilimitado</li>
+                <li>Función de exportación de datos</li>
+                <li>Soporte prioritario</li>
+            </ul>
+        </div>
+    </div>
+</div>

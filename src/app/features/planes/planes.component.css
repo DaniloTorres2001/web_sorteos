@@ -1,44 +1,168 @@
 .planes-container {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.planes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.plan {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.plan.expanded {
+  width: 400px; /* Ancho aumentado cuando está expandido */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  transform: scale(1.1);
+}
+
+/* Estilos específicos para cada plan expandido */
+.plan1-expanded {
+  background-color: #ffd700; /* Color de fondo para Plan Básico */
+}
+
+.plan2-expanded {
+  background-color: #87ceeb; /* Color de fondo para Plan Standard */
+}
+
+.plan3-expanded {
+  background-color: #90ee90; /* Color de fondo para Plan Premium */
+}
+
+.plan.hidden {
+  opacity: 0;
+  transform: scale(0.95);
+  z-index: 0;
+}
+
+.precio {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  display: none;
+}
+
+ul.active {
+  display: block;
+}
+
+/* Estilos adicionales para la animación */
+@keyframes expandToCenter {
+  0% {
+      transform: scale(1);
+      opacity: 1;
   }
-  
-  .planes {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+  100% {
+      transform: scale(1.2);
+      opacity: 0.7;
   }
+}
+
+
+
+
+.top-section {
+  background: #87CEEB; /* Color de fondo base */
+  padding: 80px 0;
+  background-image: linear-gradient(to bottom, #87CEEB, #ffffff); /* Gradiente lineal de celeste a blanco */
+  background-size: cover; /* Ajuste de tamaño del fondo */
+  background-repeat: no-repeat; /* Evitar repetición del fondo */
+}
+
+.top-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.left-content {
+  flex: 1;
+  padding: 20px;
+  color: #333;
+}
+
+.left-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.left-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons .btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons .btn-primary {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.buttons .btn-primary:hover {
+  background-color: #45a049;
+}
+
+.buttons .btn-scroll {
+  background-color: #007BFF;
+  color: white;
+}
+
+.buttons .btn-scroll:hover {
+  background-color: #0056b3;
+}
+
+.image-container {
+  flex: 1;
+  text-align: center;
   
-  .plan {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
-    width: 200px;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .plan:hover {
-    transform: scale(1.05);
-  }
-  
-  .precio {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-    display: none;
-  }
-  
-  ul li {
-    margin-bottom: 5px;
-  }
-  
-  ul.active {
-    display: block;
-  }
-  
+}
+
+.social-icons {
+  position: absolute;
+  bottom: -50px; /* Posición inicial fuera del contenedor */
+  transition: bottom 1s ease;
+  width: 250px; /* Ancho reducido */
+  height: auto; /* Altura automática para mantener la proporción */
+  padding-right: 20px; /* Espaciado a la derecha para centrar más */
+}
+
+.top-section.fade-in {
+  opacity: 1;
+}

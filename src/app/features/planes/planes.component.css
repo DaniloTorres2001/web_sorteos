@@ -1,6 +1,7 @@
 .planes-container {
   text-align: center;
   margin-top: 20px;
+  padding-bottom: 40px;
 }
 
 .planes {
@@ -10,26 +11,63 @@
 }
 
 .plan {
-  background-color: #f0f0f0;
+  background-color: #c1e3ff;
   padding: 20px;
-  border-radius: 8px;
-  width: 200px;
-  transition: all 0.5s ease-in-out;
+  border-radius: 15px;
+  width: 250px;
+  transition: all 0.5s;
   cursor: pointer;
   position: relative;
-  z-index: 1;
+  margin-bottom: 20px;
 }
 
 .plan:hover {
   transform: scale(1.05);
-  z-index: 2;
+  
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  display: none;
+}
+
+ul.active {
+  display: block;
+}
+
+.btn-plan {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-plan:hover {
+  background-color: #0056b3;
+}
+
+
 .plan.expanded {
-  width: 400px; /* Ancho aumentado cuando está expandido */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-  transform: scale(1.1);
+  width: 300px; /* Ancho aumentado al expandirse */
+  background-color: #007bff; /* Color de fondo al expandirse */
+  color: #fff; /* Color de texto al expandirse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra al expandirse */
+  padding-bottom: 40px;
+}
+
+.plan.expanded h3 {
+  color: #fff; /* Color de título al expandirse */
+}
+
+.plan.expanded ul {
+  display: block; /* Mostrar lista al expandirse */
 }
 
 /* Estilos específicos para cada plan expandido */

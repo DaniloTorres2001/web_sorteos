@@ -11,7 +11,7 @@
 }
 
 .plan {
-  background-color: #c1e3ff;
+  background-color: #cecece;
   padding: 20px;
   border-radius: 15px;
   width: 250px;
@@ -42,7 +42,7 @@ ul.active {
   margin-top: 10px;
   text-align: center;
   text-decoration: none;
-  background-color: #007bff;
+  background-color: #353535;
   color: #fff;
   padding: 8px 16px;
   border-radius: 4px;
@@ -56,12 +56,10 @@ ul.active {
 
 .plan.expanded {
   width: 300px; /* Ancho aumentado al expandirse */
-  background-color: #007bff; /* Color de fondo al expandirse */
-  color: #fff; /* Color de texto al expandirse */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra al expandirse */
   padding-bottom: 40px;
 }
-
+  
 .plan.expanded h3 {
   color: #fff; /* Color de título al expandirse */
 }
@@ -70,17 +68,19 @@ ul.active {
   display: block; /* Mostrar lista al expandirse */
 }
 
-/* Estilos específicos para cada plan expandido */
 .plan1-expanded {
-  background-color: #ffd700; /* Color de fondo para Plan Básico */
+  background-color: #ffd903; /* Color de fondo para Plan Básico */
+  color: #ffffff; 
 }
 
 .plan2-expanded {
   background-color: #87ceeb; /* Color de fondo para Plan Standard */
+  color: #ffffff; 
 }
 
 .plan3-expanded {
   background-color: #90ee90; /* Color de fondo para Plan Premium */
+  color: #ffffff; 
 }
 
 .plan.hidden {
@@ -203,4 +203,36 @@ ul.active {
 
 .top-section.fade-in {
   opacity: 1;
+}
+
+
+.bottom-section {
+  background: #87CEEB; /* Color de fondo base */
+  padding: 100px 0;
+  background-image: linear-gradient(to bottom, #ffffff, #ffffef); /* Gradiente lineal de celeste a blanco */
+  background-size: cover; /* Ajuste de tamaño del fondo */
+  background-repeat: no-repeat; /* Evitar repetición del fondo */
+}
+
+.bottom-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: #333; /* Color de texto para el contenido */
+}
+
+
+
+.btn-scroll {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-scroll:hover {
+  background-color: #0056b3;
 }

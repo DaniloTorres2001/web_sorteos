@@ -18,7 +18,7 @@ export class PlanesComponent {
       }, 500); // Ajusta el tiempo según sea necesario
     }
   }
-  
+
   expandedPlan: string | null = null;
 
   expandPlan(plan: string) {
@@ -40,4 +40,7 @@ export class PlanesComponent {
     }
     return {};
   }
+
+  
+
 }

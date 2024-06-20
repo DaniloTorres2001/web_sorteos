@@ -16,7 +16,7 @@
     </div>
 </div>
 
-<div class="planes-container">
+<div id="planes"class="planes-container">
     <h2>¡Descubre los planes que tenemos para ti!</h2>
     
     <div class="planes">
@@ -34,6 +34,7 @@
                 <li>Ingreso de participantes ilimitado</li>
             </ul>
             <a href="#" class="btn btn-primary btn-plan">Ver más</a>
+            <img *ngIf="expandedPlan === 'plan1'" src="assets/images/feliz.gif" alt="gif pro" class="gif-icons">
         </div>
         
         <div class="plan" 
@@ -51,6 +52,7 @@
                 <li>Función de exportación de datos</li>
             </ul>
             <a href="#" class="btn btn-primary btn-plan">Ver más</a>
+            <img *ngIf="expandedPlan === 'plan2'" src="assets/images/congratulations.gif" alt="gif pro1" class="gif-icons1">
         </div>
         
         <div class="plan" 
@@ -69,6 +71,8 @@
                 <li>Soporte prioritario</li>
             </ul>
             <a href="#" class="btn btn-primary btn-plan">Ver más</a>
+            <img *ngIf="expandedPlan === 'plan3'" src="assets/images/cash.gif" alt="gif pro2" class="gif-icons2">
+           
         </div>
     </div>
 </div>

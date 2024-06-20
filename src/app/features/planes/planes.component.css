@@ -230,9 +230,59 @@ ul.active {
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 10s ease;
 }
 
 .btn-scroll:hover {
   background-color: #0056b3;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.gif-icons {
+  position: absolute;
+  left: 500px; /* Ajusta la posición izquierda según tu diseño */
+  top: 50%; /* Ajusta la posición superior según tu diseño */
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.plan.expanded .gif-icons {
+  opacity: 1;
+}
+
+.gif-icons1 {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 50vw;
+  height: 50vh;
+  z-index: 1000; /* Ajusta el índice z para que esté encima de otros elementos */
+  opacity: 0; 
+  pointer-events: none; /* Evita que el GIF interfiera con los eventos del mouse */
+  transition: opacity 0.3s ease;
+}
+
+.plan.expanded .gif-icons1 {
+  opacity: 1;
+}
+
+
+.gif-icons2 {
+  position: absolute;
+  left: -500px; /* Ajusta la posición izquierda según tu diseño */
+  top: 50%; /* Ajusta la posición superior según tu diseño */
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.plan.expanded .gif-icons2 {
+  opacity: 1;
+}
+
+

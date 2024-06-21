@@ -7,6 +7,8 @@ import { LoginComponent } from './features/auth/login/login.component';
 import { HomeComponent } from './features/home/home.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { PlanesComponent } from './features/planes/planes.component';
+import { GiveawayComponent } from './features/banners/giveaway/giveaway.component';
+import { PaginaAntiguaComponent } from './features/banners/pagina-antigua/pagina-antigua.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { PlanesComponent } from './features/planes/planes.component';
     LoginComponent,
     HomeComponent,
     NavbarComponent,
-    PlanesComponent
+    PlanesComponent,
+    GiveawayComponent,
+    PaginaAntiguaComponent
   ],
   imports: [
     BrowserModule,

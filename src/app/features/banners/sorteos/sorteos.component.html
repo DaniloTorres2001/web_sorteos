@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="header">
+        <div class="input-group">
+            <input type="text" placeholder="Nombre de usuario de Instagram" (input)="onInput($event)" />
+        </div>
+        <button>Comenzar</button>
+        <span>o ingrese una URL</span>
+    </div>
+  
+    <div class="settings">
+      <div class="setting-section">
+        <div class="section-header">
+          <h3>Ajustes del sorteo</h3>
+        </div>
+        <div class="section-body">
+          <div class="setting-item">
+            <input type="text" class="name" placeholder="Definir Nombre" (input)="onInput($event)" />
+          </div>
+          <div class="setting-item">
+            <label for="winners">Ganadores</label>
+            <input type="number" id="winners" value="1" class="setting-input" />
+          </div>
+          <div class="setting-item setting-raffle">
+            <div class="top-part">
+              <label for="raffle-mode">Modo rifa</label>
+              <label class="switch">
+                <input type="checkbox" id="raffle-mode">
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <div class="bottom-part">
+              <p>Modo rifa: saca jugadores de la lista y deja que el siguiente sea ganador.</p>
+              <div class="raffle-count">3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+        <div class="setting-section">
+          <h3>Ajustes de los participantes</h3>
+          <div>
+            <label for="filter-duplicates">Filtrar por duplicados</label>
+            <input type="checkbox" id="filter-duplicates" />
+          </div>
+          <div>
+            <label for="filter-comments">Filtrar por comentarios</label>
+            <input type="checkbox" id="filter-comments" />
+          </div>
+          <div>
+            <label for="filter-reactions">Filtrar por reacción</label>
+            <input type="checkbox" id="filter-reactions" />
+          </div>
+          <ul>
+            <li>Ana Lucía</li>
+            <li>Carlos Andrés</li>
+            <li>María Fernanda</li>
+            <li>José Miguel</li>
+          </ul>
+          <input type="text" placeholder="Nombre.Correo" />
+          <button>¡Empezar sorteo!</button>
+        </div>
+    
+        <div class="setting-section">
+          <h3>Personalización empresarial</h3>
+          <button>Subir logo</button>
+          <button>Elegir tema</button>
+          <div class="publication">
+            <p>Publicación</p>
+            <ul>
+              <li>Imagen.001</li>
+              <li>Imagen.002</li>
+              <li>Imagen.003</li>
+              <li>Imagen.004</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>

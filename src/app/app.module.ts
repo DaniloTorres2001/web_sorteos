@@ -14,6 +14,8 @@ import { TestimoniosComponent } from './features/banners/testimonios/testimonios
 import { NosotrosComponent } from './features/banners/nosotros/nosotros.component';
 import { ContactosComponent } from './features/banners/contactos/contactos.component';
 import { SorteosComponent } from './features/banners/sorteos/sorteos.component';
+import { UsadasComponent } from './features/banners/usadas/usadas.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { SorteosComponent } from './features/banners/sorteos/sorteos.component';
     TestimoniosComponent,
     NosotrosComponent,
     ContactosComponent,
-    SorteosComponent
+    SorteosComponent,
+    UsadasComponent
   ],
   imports: [
     BrowserModule,

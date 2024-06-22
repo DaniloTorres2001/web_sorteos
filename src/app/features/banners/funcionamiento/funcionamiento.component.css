@@ -38,9 +38,9 @@
   
   .content {
     padding: 20px;
-    background-color: #f0f0f0;
+    /*background-color: #f0f0f0;*/
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
   }
   
   h2 {
@@ -52,9 +52,32 @@
   h3.info-title {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #666;
-  }
+    color: #ffffff; /* Color del texto */
+    cursor: pointer;
+    position: relative;
+}
   
+  h3.info-title::before {
+    content: attr(data-tooltip);
+    background-color: #ffffff; /* Color de fondo del tooltip */
+    color: #333; /* Color del texto del tooltip */
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+
+  h3.info-title:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
+
   .info-description {
     font-size: 16px;
     color: #777;

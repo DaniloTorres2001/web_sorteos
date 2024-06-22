@@ -1,121 +1,112 @@
+
 .container {
-    background-color: #735a92;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
+  background-color: #735a92;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.containerAbajo {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left-panel, .right-panel {
+  flex: 1;
+  text-align: center;
+}
+
+.left-panel img {
+  clip-path: polygon(0 100%, 0 0, 100% 100%);
+  width: 50vw;
+  height: 50vw;
+  max-width: 100%;
+}
+
+.r-panel img {
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  width: 50vw;
+  height: 50vw;
+  max-width: 100%;
+}
+
+.content {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.info-section {
+  position: relative;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.info-section:hover {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3.info-title {
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.info-section:hover h3.info-title {
+  color: #333;
+}
+
+.info-description {
+  font-size: 16px;
+  color: #333;
+  display: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #ffffff;
+}
+
+.info-section:hover .info-description {
+  display: block;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
 
-  .containerAbajo{
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-  }
-  
-  
   .left-panel, .right-panel {
-    flex: 1;
+    width: 100%;
+    margin-bottom: 20px;
     text-align: center;
   }
-  
-  .left-panel img{
-    clip-path: polygon(0 100%, 0 0, 100% 100%); /* Aplica el recorte */
-    width: 50vw; /* Ocupa el 50% del ancho de la pantalla */
-    height: 50vw;
-    max-width: 100%; /* Máximo del tamaño del contenedor */
-  }
-  
-  .r-panel img {
-    clip-path: polygon(0 0, 100% 0, 100% 100%);
-    width: 50vw; /* Ocupa el 50% del ancho de la pantalla */
-    height: 50vw;
-    max-width: 100%; /* Máximo del tamaño del contenedor */
-    
-  }
 
-  
-  .content {
-    padding: 20px;
-    /*background-color: #f0f0f0;*/
+  .left-panel img, .right-panel img {
+    width: 100%;
     border-radius: 8px;
-    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
   }
-  
-  h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #333;
-  }
-  
-  h3.info-title {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #ffffff; /* Color del texto */
-    cursor: pointer;
-    position: relative;
-}
-  
-  h3.info-title::before {
-    content: attr(data-tooltip);
-    background-color: #ffffff; /* Color de fondo del tooltip */
-    color: #333; /* Color del texto del tooltip */
-    padding: 10px;
-    border-radius: 5px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-  }
-
-
-  h3.info-title:hover::before {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .info-description {
-    font-size: 16px;
-    color: #777;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 15px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
-  
- 
-  /* Media query para dispositivos móviles */
-  
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-  
-    .left-panel, .right-panel {
-      width: 100%;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-  
-    .left-panel img, .right-panel img {
-      width: 100%; /* Ocupa todo el ancho del contenedor en dispositivos móviles */
-      border-radius: 8px; /* Mantenemos el redondeo de las esquinas */
-    }
 }

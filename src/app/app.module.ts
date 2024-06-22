@@ -10,6 +10,7 @@ import { PlanesComponent } from './features/pages/planes/planes.component';
 import { PaginaAntiguaComponent } from './features/banners/pagina-antigua/pagina-antigua.component';
 import { FuncionamientoComponent } from './features/banners/funcionamiento/funcionamiento.component';
 import { SorteoInstagramComponent } from './features/banners/sorteo-instagram/sorteo-instagram.component';
+import { TestimoniosComponent } from './features/banners/testimonios/testimonios.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SorteoInstagramComponent } from './features/banners/sorteo-instagram/so
     PlanesComponent,
     PaginaAntiguaComponent,
     FuncionamientoComponent,
-    SorteoInstagramComponent
+    SorteoInstagramComponent,
+    TestimoniosComponent
   ],
   imports: [
     BrowserModule,

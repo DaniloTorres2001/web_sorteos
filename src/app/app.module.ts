@@ -4,12 +4,12 @@ import { AuthGuard } from './core/guards/auth.guard';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './features/auth/login/login.component';
-import { HomeComponent } from './features/home/home.component';
+import { HomeComponent } from './features/pages/home/home.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
-import { PlanesComponent } from './features/planes/planes.component';
-import { GiveawayComponent } from './features/banners/giveaway/giveaway.component';
+import { PlanesComponent } from './features/pages/planes/planes.component';
 import { PaginaAntiguaComponent } from './features/banners/pagina-antigua/pagina-antigua.component';
-import { FuncionamientoComponent } from './features/funcionamiento/funcionamiento.component';
+import { FuncionamientoComponent } from './features/banners/funcionamiento/funcionamiento.component';
+import { SorteoInstagramComponent } from './features/banners/sorteo-instagram/sorteo-instagram.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +18,9 @@ import { FuncionamientoComponent } from './features/funcionamiento/funcionamient
     HomeComponent,
     NavbarComponent,
     PlanesComponent,
-    GiveawayComponent,
     PaginaAntiguaComponent,
-    FuncionamientoComponent
+    FuncionamientoComponent,
+    SorteoInstagramComponent
   ],
   imports: [
     BrowserModule,

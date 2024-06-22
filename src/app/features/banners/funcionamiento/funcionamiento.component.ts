@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-funcionamiento',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./funcionamiento.component.css']
 })
 export class FuncionamientoComponent {
-
+  @Input() mostrarNavbar: boolean = true;
 }

@@ -21,6 +21,7 @@ export class TestimoniosComponent {
 
   currentTestimonial = 0;
   testimonialsToShow = 3;
+  transformValue = 0;
 
   @HostListener('window:resize', ['$event'])
   onResize(event:any) {

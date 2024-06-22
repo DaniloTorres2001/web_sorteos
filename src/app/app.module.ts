@@ -13,6 +13,8 @@ import { SorteoInstagramComponent } from './features/banners/sorteo-instagram/so
 import { TestimoniosComponent } from './features/banners/testimonios/testimonios.component';
 import { NosotrosComponent } from './features/banners/nosotros/nosotros.component';
 import { ContactosComponent } from './features/banners/contactos/contactos.component';
+import { UsadasComponent } from './features/banners/usadas/usadas.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { ContactosComponent } from './features/banners/contactos/contactos.compo
     SorteoInstagramComponent,
     TestimoniosComponent,
     NosotrosComponent,
-    ContactosComponent
+    ContactosComponent,
+    UsadasComponent
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,8 @@ import { PaginaAntiguaComponent } from './features/banners/pagina-antigua/pagina
 import { FuncionamientoComponent } from './features/banners/funcionamiento/funcionamiento.component';
 import { SorteoInstagramComponent } from './features/banners/sorteo-instagram/sorteo-instagram.component';
 import { TestimoniosComponent } from './features/banners/testimonios/testimonios.component';
+import { NosotrosComponent } from './features/banners/nosotros/nosotros.component';
+import { ContactosComponent } from './features/banners/contactos/contactos.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { TestimoniosComponent } from './features/banners/testimonios/testimonios
     PaginaAntiguaComponent,
     FuncionamientoComponent,
     SorteoInstagramComponent,
-    TestimoniosComponent
+    TestimoniosComponent,
+    NosotrosComponent,
+    ContactosComponent
   ],
   imports: [
     BrowserModule,

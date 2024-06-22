@@ -5,7 +5,7 @@
   </div>
   <div class="right-panel">
     <div class="content">
-      <h2>¿Cómo funciona?</h2>
+      <h2 class = "titulo-general">¿Cómo funciona?</h2>
       <div class="info-section" (mouseover)="showTooltip('post')" (mouseleave)="hideTooltip()">
         <h3 class="info-title">Selecciona el post</h3>
         <p class="info-description" *ngIf="activeTooltip === 'post'">
@@ -34,18 +34,25 @@
   </div>
 </div>
 
-  
+
+
+
   <div class="containerAbajo">
     <div class="right-panel">
-      <div class="content">
-        <h2>Información</h2>
-        <p>
-          Crea una ruleta de la fortuna para captar leads. Personaliza el diseño de tu ruleta,
-          captura los datos de los participantes, embebe la ruleta en tu sitio web y utiliza un
-          popup al salir del sitio para aumentar la interacción.
-        </p>
-        <button class="btn">Pruébalo Gratis</button>
+
+
+      <div class="card">
+        <div class="card-details">
+          <p class="text-title">Crea tus sorteos como nunca antes y haz crecer los leads</p>
+          <p class="text-body">▶ Crea sorteos para captar leads.</p>
+          <p class="text-body">▶ Personaliza el diseño del sorteo</p>
+          <p class="text-body">▶ Haz crecer tu negocio con visitas</p>
+          <p class="text-body">▶ Aumenta la interacción con tus clientes</p>
+        </div>
+        <button class="card-button">¡Atrevete!</button>
       </div>
+
+
     </div>
     <div class="r-panel">
       <img src="assets/images/funcionamiento/ruleta.png" alt="Imagen de ruleta">

@@ -13,7 +13,7 @@ import { HistorialComponent } from './features/banners/historial/historial.compo
 const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'other-home', component: OtherHomeComponent, canActivate: [AuthGuard] },
-  // { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   // { path: 'planes', component: PlanesComponent },
   // { path: 'funcionamiento', component: FuncionamientoComponent},
   // { path: 'usadas', component: UsadasComponent},

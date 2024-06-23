@@ -10,12 +10,27 @@
 .navbar-left {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .navbar-logo img {
-    height: 40px;
+    margin-top: 10px;
+    height: 30px;
 }
 
+a {
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+    display: block; /* Asegurarse de que el enlace sea un bloque */
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
 .navbar-profile img {
     display: none;
     height: 40px;
@@ -49,12 +64,11 @@
     background-color: white;
 }
 
-/* Optional: Add some hover effects */
 .navbar-link:hover {
     color: #00b6f1;
 }
 
-/* Responsive design */
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;

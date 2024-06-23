@@ -616,6 +616,12 @@ input:checked+.slider:before {
     .setting-section:nth-child(3) {
         max-width: 90%;
     }
+    .header button {
+        margin-left: 0px;
+    }
+    .start-draw-button {
+        margin-left: 0px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -646,6 +652,13 @@ input:checked+.slider:before {
     
     .input-group input {
         background-position: 0px center;
+    }
+
+    .header button {
+        margin-left: 0px;
+    }
+    .start-draw-button {
+        margin-left: 0px;
     }
 }
 

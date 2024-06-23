@@ -114,4 +114,8 @@
   .input-container li {
     width: 300px;
   }
+  
+  .sorteo-lista-container p {
+   padding: 10px;
+  }
 }

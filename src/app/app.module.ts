@@ -21,6 +21,7 @@ import { HistorialComponent } from './features/banners/historial/historial.compo
 import { SorteoPorListaComponent } from './features/banners/sorteo-por-lista/sorteo-por-lista.component';
 import { SorteoActualComponent } from './features/banners/sorteo-actual/sorteo-actual.component';
 import { NavBarComponent } from './shared/components/nav-bar/nav-bar.component';
+import { OtherHomeComponent } from './features/pages/other-home/other-home.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { NavBarComponent } from './shared/components/nav-bar/nav-bar.component';
     HistorialComponent,
     SorteoPorListaComponent,
     SorteoActualComponent,
-    NavBarComponent
+    NavBarComponent,
+    OtherHomeComponent
   ],
   imports: [
     BrowserModule,

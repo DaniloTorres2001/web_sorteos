@@ -1,0 +1,94 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #171616;
+    padding: 0 20px;
+    height: 60px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 40px;
+}
+
+.navbar-profile img {
+    display: none;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(101, 101, 101);
+    margin-left: 20px;
+}
+
+.navbar-profile2 img {
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(101, 101, 101);
+    margin-left: 20px;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+}
+
+.navbar-divider {
+    height: 30px;
+    width: 1px;
+    background-color: white;
+}
+
+/* Optional: Add some hover effects */
+.navbar-link:hover {
+    color: #00b6f1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        height: auto;
+    }
+
+    .navbar-left {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .navbar-link {
+        margin: 10px 0;
+    }
+
+    .navbar-divider {
+        display: none;
+    }
+
+    .navbar-profile2 img {
+        display: none;
+    }
+
+    .navbar-profile img {
+        display: flex;
+    }
+
+}

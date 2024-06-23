@@ -2,7 +2,7 @@
 .instagram-giveaway {
     text-align: center;
     padding: 2em;
-    background: linear-gradient(to right, #745c94 , #2ca6dc );
+    background: linear-gradient(to right, #745c94, #2ca6dc);
     color: white;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .instagram-giveaway .input-group input {
-    padding: 0.5em 0.5em 0.5em 2.5em; 
+    padding: 0.5em 0.5em 0.5em 2.5em;
     font-size: 1em;
     outline: none;
     border: none;
@@ -38,7 +38,7 @@
     flex: 1;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    background-image: url('/assets/images/sorteo-instagram/logo_instagram.webp'); 
+    background-image: url('/assets/images/sorteo-instagram/logo_instagram.webp');
     background-size: 38px 26px;
     background-repeat: no-repeat;
     background-position: 35px center;
@@ -55,7 +55,7 @@
     font-size: 1em;
     color: white;
     background-color: transparent;
-    border: 2px solid white; 
+    border: 2px solid white;
     border-radius: 12px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;

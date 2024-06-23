@@ -4,7 +4,6 @@
     align-items: center;
     background-color: #38ace4;
     padding: 20px;
-    border-radius: 10px;
 }
 
 .header {
@@ -89,6 +88,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .section-header {
@@ -97,16 +97,19 @@
     border-top-right-radius: 10px;
     padding: 10px 0;
     text-align: center;
-  }
+}
 
 .section-body {
-    background-color: #aceaf4 ;
+    background-color: #aceaf4;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
 }
 
 .setting-section h3 {
@@ -123,13 +126,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #34ace4 ;
+    background-color: #34ace4;
     color: #fff;
     padding: 10px;
     border-radius: 25px;
     margin: 10px 0;
     width: 100%;
-  }
+}
 
 .setting-item button {
     background-color: transparent;
@@ -138,14 +141,14 @@
     cursor: pointer;
 }
 
-.setting-item:first-child input.name  {
+.name {
     font-size: 1em;
     outline: none;
     border: none;
     flex: 1;
-    text-align:left;
+    text-align: left;
     font-family: 'Montserrat', sans-serif;
-    background-image: url('/assets/images/sorteo/user.png'); 
+    background-image: url('/assets/images/sorteo/user.png');
     background-size: 25px 18px;
     background-repeat: no-repeat;
     background-position: right;
@@ -153,12 +156,12 @@
     color: #ffffff;
 }
 
-.setting-item:first-child input.name::placeholder {
+.name::placeholder {
     color: #ffffff;
-    opacity: 1; 
+    opacity: 1;
 }
 
-.setting-item:first-child input.name.has-content {
+.name.has-content {
     background-image: none;
 }
 
@@ -186,13 +189,22 @@
     right: 0;
 }
 
+.bold-colored-text {
+    color: #34ace4;
+    font-weight: bold;
+}
+
+.colored-text {
+    color: rgb(54, 54, 54);
+}
+
 .setting-raffle .bottom-part {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #e4f4fc ;
-    padding: 50px 10px 10px; /* Ajusta el padding superior para que el contenido no se superponga */
+    background-color: #e4f4fc;
+    padding: 50px 10px 10px;
     width: 100%;
     height: 100%;
     border-radius: 25px;
@@ -204,6 +216,28 @@
     flex: 1;
     color: #000000;
 }
+
+.setting-raffle .bottom-part .raffle-count-input {
+    background-color: #34ace4;
+    color: white;
+    border-radius: 40%;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+
+/* Esto es cuando se quieran ingresar numeros
+.setting-raffle .bottom-part .raffle-count-input::placeholder {
+    color: #ffffff;
+    opacity: 1; 
+    font-size: 17px;
+} */
 
 .setting-raffle .bottom-part .raffle-count {
     background-color: #007bff;
@@ -237,7 +271,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #5b5b5b;
+    background-color: #e4f4fc;
     transition: .4s;
     border-radius: 34px;
 }
@@ -249,18 +283,133 @@
     width: 14px;
     left: 3px;
     bottom: 3px;
-    background-color: #e4f4fc;
+    background-color: #9d9d9d;
     transition: .4s;
     border-radius: 50%;
 }
 
-input:checked + .slider {
-    background-color: #5b5b5b  ;
+input:checked+.slider {
+    background-color: #e4f4fc;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     transform: translateX(14px);
     color: #000000;
+}
+
+.setting-participants {
+    display: flex;
+    flex-direction: column;
+    background-color: #e4f4fc;
+    padding: 0;
+    width: 100%;
+    min-height: 110px;
+    max-height: 150px;
+    /* Ajusta este valor según sea necesario */
+    border-radius: 25px;
+    overflow-y: auto;
+}
+
+.setting-participants .top-part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #34ace4;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.setting-participants .bottom-part {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    background-color: #e4f4fc;
+    padding: 10px;
+    width: 100%;
+    border-radius: 0 0 25px 25px;
+}
+
+.setting-participants .bottom-part .participant {
+    display: flex;
+    text-align: left;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #34ace4;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.setting-participants .bottom-part p {
+    margin: 0;
+    color: #34ace4;
+    flex: 1;
+}
+
+.participant-icon {
+    color: #34ace4;
+    transition: color 0.3s;
+    margin-right: 10px;
+}
+
+
+.participant-icon.checked {
+    color: green;
+}
+
+
+.participant-remove:hover {
+    color: #ff0000;
+}
+
+
+.participant-remove {
+    color: #ff4d4d;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+.add-icon {
+    color: #34ace4;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.add-icon:hover {
+    color: #007bff;
+}
+
+.name-mail {
+    font-size: 1em;
+    outline: none;
+    border: none;
+    flex: 1;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e4f4fc;
+    color: #34ace4;
+}
+
+.name-mail::placeholder {
+    color: #34ace4;
+    opacity: 1;
+}
+
+.name-mail:focus {
+    border-bottom-color: #007bff;
+    transition: border-bottom-color 0.3s;
+}
+
+.name-mail.has-content {
+    background-image: none;
 }
 
 .setting-section button {
@@ -273,8 +422,7 @@ input:checked + .slider:before {
     margin-bottom: 10px;
 }
 
-.setting-section input[type="number"]
-{
+.setting-section input[type="number"] {
     border: 1px solid #ccc;
     width: 40px;
     height: 100%;
@@ -288,36 +436,194 @@ input:checked + .slider:before {
 
 .setting-section input[type="number"]::-webkit-inner-spin-button,
 .setting-section input[type="number"]::-webkit-outer-spin-button {
-    opacity: 1; /* Asegura que las flechas sean visibles en Webkit (Chrome, Safari) */
-    margin: 0; 
+    opacity: 1;
+    /* Asegura que las flechas sean visibles en Webkit (Chrome, Safari) */
+    margin: 0;
 }
 
 .setting-section input[type="checkbox"] {
     margin-right: 10px;
 }
 
-.setting-section ul {
-    list-style-type: none;
-    padding: 0;
+.publication label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
+    background-color: #34ace4;
+    color: white;
+    padding: 10px;
+    border-radius: 25px;
+    margin-bottom: 10px;
 }
 
-.setting-section ul li {
-    background-color: #f1f1f1;
-    padding: 5px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-.publication ul {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
+.publication label i {
+    margin-left: 10px;
 }
 
 .publication ul li {
-    background-color: #f1f1f1;
-    padding: 5px;
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e4f4fc;
+    padding: 10px;
+    border-radius: 25px;
     margin-bottom: 5px;
+    color: #34ace4;
 }
+
+.publication ul li i {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.publication ul li i:hover {
+    color: #007bff;
+}
+
+.logo .add-icon {
+    margin-right: 20px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.logo .add-icon:hover {
+    color: #ffffff;
+}
+
+.topic .fa-th-large {
+    margin-right: 20px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.topic .fa-th-large:hover {
+    color: #ffffff;
+}
+
+/* setting publicaction y settin participant, hacen lo mismo, pero lo separe en dos, en caso de que mas adelanta vayan a cambiar algo */
+
+.setting-publication {
+    display: flex;
+    flex-direction: column;
+    background-color: #e4f4fc;
+    padding: 0;
+    width: 100%;
+    min-height: 100px;
+    max-height: 180px;
+    /* Ajusta este valor según sea necesario */
+    border-radius: 25px;
+    overflow-y: auto;
+}
+
+.setting-publication .top-part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #34ace4;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.setting-publication .bottom-part {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    background-color: #e4f4fc;
+    padding: 10px;
+    width: 100%;
+    border-radius: 0 0 25px 25px;
+}
+
+.setting-publication .bottom-part .publication {
+    display: flex;
+    text-align: left;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #34ace4;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.setting-publication .bottom-part p {
+    margin: 0;
+    color: #34ace4;
+    flex: 1;
+}
+
+.photo {
+    margin-right: 20px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.publication-icon {
+    color: #34ace4;
+    transition: color 0.3s;
+    margin-right: 10px;
+}
+
+
+.publication-remove:hover {
+    color: #ff0000;
+}
+
+.publication-remove {
+    color: #ff4d4d;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+.start-draw-button {
+    background-color: white;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #34ace4;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 8px 18px;
+    border: 2px solid white;
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+.start-draw-button:hover {
+    background-color: transparent;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+@media (max-width: 1200px) {
+    .settings {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .setting-section {
+        max-width: 45%;
+        min-width: 45%;
+        margin: 20px 10px;
+    }
+
+    .setting-section:nth-child(3) {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 800px) {
+    .setting-section {
+        max-width: 90%;
+        min-width: 90%;
+        margin: 20px 0;
+    }
+}
+

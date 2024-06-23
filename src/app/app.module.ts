@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AuthGuard } from './core/guards/auth.guard';
 import { AppRoutingModule } from './app-routing.module';
@@ -35,7 +36,8 @@ import { UsadasComponent } from './features/banners/usadas/usadas.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

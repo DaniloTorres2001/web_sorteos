@@ -6,6 +6,8 @@ import { AuthGuard } from './core/guards/auth.guard';
 import { PlanesComponent} from './features/pages/planes/planes.component';
 import { FuncionamientoComponent } from './features/banners/funcionamiento/funcionamiento.component';
 import { UsadasComponent } from './features/banners/usadas/usadas.component';
+import { MisSorteosComponent } from './features/banners/mis-sorteos/mis-sorteos.component';
+import { HistorialComponent } from './features/banners/historial/historial.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -13,6 +15,8 @@ const routes: Routes = [
   { path: 'planes', component: PlanesComponent },
   { path: 'funcionamiento', component: FuncionamientoComponent},
   { path: 'usadas', component: UsadasComponent},
+  { path: 'missorteos', component: MisSorteosComponent},
+  { path: 'historial', component: HistorialComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Pagina principal
 ];
 

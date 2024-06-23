@@ -16,6 +16,8 @@ import { NosotrosComponent } from './features/banners/nosotros/nosotros.componen
 import { ContactosComponent } from './features/banners/contactos/contactos.component';
 import { SorteosComponent } from './features/banners/sorteos/sorteos.component';
 import { UsadasComponent } from './features/banners/usadas/usadas.component';
+import { MisSorteosComponent } from './features/banners/mis-sorteos/mis-sorteos.component';
+import { HistorialComponent } from './features/banners/historial/historial.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { UsadasComponent } from './features/banners/usadas/usadas.component';
     NosotrosComponent,
     ContactosComponent,
     SorteosComponent,
-    UsadasComponent
+    UsadasComponent,
+    MisSorteosComponent,
+    HistorialComponent
   ],
   imports: [
     BrowserModule,
